@@ -128,7 +128,7 @@ if (MSVC)
     # to support previous user experience for linkage.
     install(FILES
             $<TARGET_LINKER_FILE:tbb>
-            DESTINATION lib
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}
             CONFIGURATIONS RelWithDebInfo Release MinSizeRel
             RENAME tbb.lib
             COMPONENT devel
@@ -136,7 +136,7 @@ if (MSVC)
 
     install(FILES
             $<TARGET_LINKER_FILE:tbb>
-            DESTINATION lib
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}
             CONFIGURATIONS Debug
             RENAME tbb_debug.lib
             COMPONENT devel
